@@ -1,7 +1,5 @@
 // let rl = require('readline-sync');
 
-// console.log("i'm linked")
-
 
 let incrementor = 0;
 let compIncrementor = 0;
@@ -35,9 +33,6 @@ setTimeout(function() {alert("Click on your boxes to set up your board");}, 200)
 
 function startGame() {
 	location.reload();
-
-	// document.getElementById("demo").innerHTML = "Click on your boxes to set up your board. Refresh window to play again.";
-	// setUpShips();
 }
    
 //set computer ship positions
@@ -58,18 +53,12 @@ function startGame() {
 
 //set player ship positions
 
-// function setUpShips() {
-
-// 	let incrementor = 0;
-
 			function set_pa1() {
 				if (pArr[0].value === false && incrementor < 3) {
 			let x = document.getElementById("pa1");
 			x.className = "set";			
 			pArr[0].value = true;
-      // console.log(pArr[0]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -79,9 +68,7 @@ function startGame() {
 			let x = document.getElementById("pa2");
 			x.className = "set";			
 			pArr[1].value = true;
-      // console.log(pArr[1]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -91,9 +78,7 @@ function startGame() {
 			let x = document.getElementById("pa3");
 			x.className = "set";			
 			pArr[2].value = true;
-      // console.log(pArr[2]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -103,9 +88,7 @@ function startGame() {
 			let x = document.getElementById("pa4");
 			x.className = "set";			
 			pArr[3].value = true;
-      // console.log(pArr[3]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -115,9 +98,7 @@ function startGame() {
 			let x = document.getElementById("pa5");
 			x.className = "set";			
 			pArr[4].value = true;
-      // console.log(pArr[4]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -127,9 +108,7 @@ function startGame() {
 			let x = document.getElementById("pa6");
 			x.className = "set";			
 			pArr[5].value = true;
-      // console.log(pArr[5]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -139,9 +118,7 @@ function startGame() {
 			let x = document.getElementById("pa7");
 			x.className = "set";			
 			pArr[6].value = true;
-      // console.log(pArr[6]);
       incrementor ++;
-      // console.log(incrementor);;
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -151,9 +128,7 @@ function startGame() {
 			let x = document.getElementById("pa8");
 			x.className = "set";			
 			pArr[7].value = true;
-      // console.log(pArr[7]);
       incrementor ++;
-      // console.log(incrementor);
       if (incrementor === 3) {
 		playGame();}
 			}}
@@ -163,30 +138,10 @@ function startGame() {
 			let x = document.getElementById("pa9");
 			x.className = "set";			
 			pArr[8].value = true;
-      // console.log(pArr[8]);
       incrementor ++;
-      // console.log(incrementor);
-      // if (incrementor < 3) {
-		// setUpShips();
-		// 	}}}
 		if (incrementor === 3) {
 		playGame();}
 }}
-
-	// if (incrementor < 3) {
-	// 	setUpShips();
-	// if (incrementor === 3) {
-	// 	playGame();}
-
-
-//play game
-	 
-// function start() {
-// if (incrementor < 3) {
-// 	setUpShips();
-// } else if (incrementor === 3) {
-// 	playGame();
-// }}
 
 			
 // function playGame() {
@@ -347,20 +302,6 @@ function startGame() {
 			setTimeout(function() {computerAttack();}, 700);		
 			}}
 
-		// else {
-		// 	alert	{"Attack the computer!"};
-		// }
-
-			// let p1 = 0;
-			// let p2 = 0;
-			// let p3 = 0;
-			// let p4 = 0;
-			// let p5 = 0;
-			// let p6 = 0;
-			// let p7 = 0;
-			// let p8 = 0;
-			// let p9 = 0;
-
 
 		//computer attacks
 
@@ -472,6 +413,9 @@ function startGame() {
 		}
 	}
 
+
+//declare winner
+
 function evaluateWin() {
 if (cArr[0] === false && cArr[1] === false && cArr[2] === false && cArr[3] === false && cArr[4] === false && cArr[5] === false && cArr[6] === false && cArr[7] === false && cArr[8] === false) {
 	// document.getElementById("demo").innerHTML = "You win!";
@@ -485,20 +429,3 @@ function playGame() {
 	alert("Attack the computer!");
 // console.log("Hi");
 }
-
-
-//declare winner
-
-// if (ca1 === false && ca2 === false && ca3 === false && ca4 === false && ca5 === false && ca6 === false && ca7 === false && ca8 === false && ca9 === false) {
-// 	console.log("You win!")
-// } else if (pa1 === false && pa2 === false && pa3 === false && pa4 === false && pa5 === false && pa6 === false && pa7 === false && pa8 === false && pa9 === false){
-// 	console.log("Computer wins!")
-// };
-
-//ask if play again?
-// if("yes") {
-// 	restart script
-// } else {
-// 	console.log("Thanks for playing!")
-// }
-console.log("This is the end of the game");
