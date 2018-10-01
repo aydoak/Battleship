@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Material Design for Bootstrap fonts and icons -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons">
+
+    <!-- Material Design for Bootstrap CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css" integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX" crossorigin="anonymous">
+
+    <title>Battleship!</title>
+
+  <link rel="stylesheet" type="text/css" href="bs_stylesheet.css">
+
+  </head>
+  <body>
+    <h1>Battleship!</h1>
+
+    <p class="console"></p>
+    <div class="player-label">
+      <h3>Computer</h3>
+      <h3>Player</h3>
+    </div>
+
+    <div class="play-area">
+      <!-- <div class="grid-container", class = "computer-board", onclick="myFunction(event)"> -->
+      <div class="grid-container", class = "computer-board">
+        <div class="new", id="ca1", onclick="attack1()">1</div>
+        <div class="new", id="ca2", onclick="attack2()">2</div>
+        <div class="new", id="ca3", onclick="attack3()">3</div> 
+        <div class="new", id="ca4", onclick="attack4()">4</div>
+        <div class="new", id="ca5", onclick="attack5()">5</div>
+        <div class="new", id="ca6", onclick="attack6()">6</div>
+        <div class="new", id="ca7", onclick="attack7()">7</div>
+        <div class="new", id="ca8", onclick="attack8()">8</div>
+        <div class="new", id="ca9", onclick="attack9()">9</div>
+      </div>
+
+      <!-- <div class="grid-container", class = "player-board", onclick="myFunction(event)"> -->
+      <div class="grid-container", class = "player-board">
+        <div class="new", id="pa1", onclick="set_pa1()">1</div>
+        <div class="new", id="pa2", onclick="set_pa2()">2</div>
+        <div class="new", id="pa3", onclick="set_pa3()">3</div> 
+        <div class="new", id="pa4", onclick="set_pa4()">4</div>
+        <div class="new", id="pa5", onclick="set_pa5()">5</div>
+        <div class="new", id="pa6", onclick="set_pa6()">6</div>
+        <div class="new", id="pa7", onclick="set_pa7()">7</div>
+        <div class="new", id="pa8", onclick="set_pa8()">8</div>
+        <div class="new", id="pa9", onclick="set_pa9()">9</div>
+      </div>
+    </div>
+
+    <button id="start", onclick="startGame()">Start</button>
+
+    <p id="demo"></p>
+
+<!-- <script>
+document.getElementById("demo").innerHTML = 5 + 6;
+</script> -->
+
+    <script language="javascript" type="text/javascript" src="battleship.js">
+    </script>
+  </body>
+</html>
