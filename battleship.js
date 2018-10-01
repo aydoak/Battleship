@@ -33,7 +33,7 @@ let pArr = [{value: false,
 //start game
 
 function startGame() {
-	document.getElementById("demo").innerHTML = "Click on your boxes to set up your board";
+	document.getElementById("demo").innerHTML = "Click on your boxes to set up your board. Refresh window to play again.";
 	// setUpShips();
 }
    
@@ -186,7 +186,7 @@ function startGame() {
 // }}
 
 			
-function playGame() {
+// function playGame() {
 			let c1 = 0;
 			let c2 = 0;
 			let c3 = 0;
@@ -205,13 +205,15 @@ function playGame() {
 			let x = document.getElementById("ca1");
 			x.className = "miss";
 			c1++;		
+			evaluateWin();
 			computerAttack();	
 			} else if (incrementor >= 3 && cArr[0] === true && c1 < 1) {
 			let x = document.getElementById("ca1");
 			x.className = "hit";
 			c1++;	
-			computerAttack();		
 			cArr[0] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack2() {
@@ -219,13 +221,15 @@ function playGame() {
 			let x = document.getElementById("ca2");
 			x.className = "miss";
 			c2++;	
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[1] === true && c2 < 1) {
 			let x = document.getElementById("ca2");
 			x.className = "hit";
 			c2++;	
-			computerAttack();	
 			cArr[1] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack3() {
@@ -233,13 +237,15 @@ function playGame() {
 			let x = document.getElementById("ca3");
 			x.className = "miss";
 			c3++;
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[2] === true && c3 < 1) {
 			let x = document.getElementById("ca3");
 			x.className = "hit";
 			c3++;	
-			computerAttack();		
 			cArr[2] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack4() {
@@ -247,13 +253,15 @@ function playGame() {
 			let x = document.getElementById("ca4");
 			x.className = "miss";
 			c4++;
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[3] === true && c4 < 1) {
 			let x = document.getElementById("ca4");
 			x.className = "hit";
 			c4++;	
-			computerAttack();	
 			cArr[3] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack5() {
@@ -261,13 +269,15 @@ function playGame() {
 			let x = document.getElementById("ca5");
 			x.className = "miss";
 			c5++;
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[4] === true && c5 < 1) {
 			let x = document.getElementById("ca5");
 			x.className = "hit";
 			c5++;	
-			computerAttack();		
 			cArr[4] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack6() {
@@ -275,13 +285,15 @@ function playGame() {
 			let x = document.getElementById("ca6");
 			x.className = "miss";
 			c6++;
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[5] === true && c6 < 1) {
 			let x = document.getElementById("ca6");
 			x.className = "hit";
 			c6++;	
-			computerAttack();		
 			cArr[5] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack7() {
@@ -289,13 +301,15 @@ function playGame() {
 			let x = document.getElementById("ca7");
 			x.className = "miss";
 			c7++;
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[6] === true && c7 < 1) {
 			let x = document.getElementById("ca7");
 			x.className = "hit";
 			c7++;		
-			computerAttack();	
 			cArr[6] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack8() {
@@ -304,12 +318,14 @@ function playGame() {
 			x.className = "miss";
 			c8++;
 			computerAttack();
+			evaluateWin();
 			} else if (incrementor >= 3 && cArr[7] === true && c8 < 1) {
 			let x = document.getElementById("ca8");
 			x.className = "hit";
 			c8++;		
-			computerAttack();
 			cArr[7] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 			function attack9() {
@@ -317,13 +333,15 @@ function playGame() {
 			let x = document.getElementById("ca9");
 			x.className = "miss";
 			c9++;
+			evaluateWin();
 			computerAttack();
 			} else if (incrementor >= 3 && cArr[8] === true && c9 < 1) {
 			let x = document.getElementById("ca9");
 			x.className = "hit";
 			c9++;
-			computerAttack();	
 			cArr[8] = false;
+			evaluateWin();
+			computerAttack();		
 			}}
 
 		// else {
@@ -452,11 +470,14 @@ function playGame() {
 	}
 
 function evaluateWin() {
-if (ca1 === false && ca2 === false && ca3 === false && ca4 === false && ca5 === false && ca6 === false && ca7 === false && ca8 === false && ca9 === false) {
-	console.log("You win!")
-} else if (pa1 === false && pa2 === false && pa3 === false && pa4 === false && pa5 === false && pa6 === false && pa7 === false && pa8 === false && pa9 === false){
-	console.log("Computer wins!")
+if (cArr[0] === false && cArr[1] === false && cArr[2] === false && cArr[3] === false && cArr[4] === false && cArr[5] === false && cArr[6] === false && cArr[7] === false && cArr[8] === false) {
+	document.getElementById("demo").innerHTML = "You win!";
+} else if (pArr[0].value === false && pArr[1].value === false && pArr[2].value === false && pArr[3].value === false && pArr[4].value === false && pArr[5].value === false && pArr[6].value === false && pArr[7].value === false && pArr[8].value === false){
+	document.getElementById("demo").innerHTML = "Computer wins!";
 } }
+
+function playGame() {
+console.log("Hi");
 }
 
 
