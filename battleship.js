@@ -1,6 +1,6 @@
 // let rl = require('readline-sync');
 
-console.log("i'm linked")
+// console.log("i'm linked")
 
 
 let incrementor = 0;
@@ -33,6 +33,7 @@ let pArr = [{value: false,
 //start game
 
 function startGame() {
+	location.reload();
 	document.getElementById("demo").innerHTML = "Click on your boxes to set up your board. Refresh window to play again.";
 	// setUpShips();
 }
@@ -471,13 +472,15 @@ function startGame() {
 
 function evaluateWin() {
 if (cArr[0] === false && cArr[1] === false && cArr[2] === false && cArr[3] === false && cArr[4] === false && cArr[5] === false && cArr[6] === false && cArr[7] === false && cArr[8] === false) {
-	document.getElementById("demo").innerHTML = "You win!";
+	// document.getElementById("demo").innerHTML = "You win!";
+	alert("You win!")
 } else if (pArr[0].value === false && pArr[1].value === false && pArr[2].value === false && pArr[3].value === false && pArr[4].value === false && pArr[5].value === false && pArr[6].value === false && pArr[7].value === false && pArr[8].value === false){
-	document.getElementById("demo").innerHTML = "Computer wins!";
+	// document.getElementById("demo").innerHTML = "Computer wins!";
+	alert("Computer wins!")
 } }
 
 function playGame() {
-console.log("Hi");
+// console.log("Hi");
 }
 
 
