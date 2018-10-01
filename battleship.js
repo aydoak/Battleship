@@ -31,10 +31,12 @@ let pArr = [{value: false,
 
 
 //start game
+setTimeout(function() {alert("Click on your boxes to set up your board");}, 200);	
 
 function startGame() {
 	location.reload();
-	document.getElementById("demo").innerHTML = "Click on your boxes to set up your board. Refresh window to play again.";
+
+	// document.getElementById("demo").innerHTML = "Click on your boxes to set up your board. Refresh window to play again.";
 	// setUpShips();
 }
    
@@ -207,14 +209,14 @@ function startGame() {
 			x.className = "miss";
 			c1++;		
 			evaluateWin();
-			computerAttack();	
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[0] === true && c1 < 1) {
 			let x = document.getElementById("ca1");
 			x.className = "hit";
 			c1++;	
 			cArr[0] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);
 			}}
 
 			function attack2() {
@@ -223,14 +225,14 @@ function startGame() {
 			x.className = "miss";
 			c2++;	
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[1] === true && c2 < 1) {
 			let x = document.getElementById("ca2");
 			x.className = "hit";
 			c2++;	
 			cArr[1] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);		
 			}}
 
 			function attack3() {
@@ -239,14 +241,14 @@ function startGame() {
 			x.className = "miss";
 			c3++;
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[2] === true && c3 < 1) {
 			let x = document.getElementById("ca3");
 			x.className = "hit";
 			c3++;	
 			cArr[2] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);		
 			}}
 
 			function attack4() {
@@ -255,14 +257,14 @@ function startGame() {
 			x.className = "miss";
 			c4++;
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[3] === true && c4 < 1) {
 			let x = document.getElementById("ca4");
 			x.className = "hit";
 			c4++;	
 			cArr[3] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);	
 			}}
 
 			function attack5() {
@@ -271,14 +273,14 @@ function startGame() {
 			x.className = "miss";
 			c5++;
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[4] === true && c5 < 1) {
 			let x = document.getElementById("ca5");
 			x.className = "hit";
 			c5++;	
 			cArr[4] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);		
 			}}
 
 			function attack6() {
@@ -287,14 +289,14 @@ function startGame() {
 			x.className = "miss";
 			c6++;
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[5] === true && c6 < 1) {
 			let x = document.getElementById("ca6");
 			x.className = "hit";
 			c6++;	
 			cArr[5] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);	
 			}}
 
 			function attack7() {
@@ -303,14 +305,14 @@ function startGame() {
 			x.className = "miss";
 			c7++;
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[6] === true && c7 < 1) {
 			let x = document.getElementById("ca7");
 			x.className = "hit";
 			c7++;		
 			cArr[6] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);	
 			}}
 
 			function attack8() {
@@ -318,7 +320,7 @@ function startGame() {
 			let x = document.getElementById("ca8");
 			x.className = "miss";
 			c8++;
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			evaluateWin();
 			} else if (incrementor >= 3 && cArr[7] === true && c8 < 1) {
 			let x = document.getElementById("ca8");
@@ -326,7 +328,7 @@ function startGame() {
 			c8++;		
 			cArr[7] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);	
 			}}
 
 			function attack9() {
@@ -335,14 +337,14 @@ function startGame() {
 			x.className = "miss";
 			c9++;
 			evaluateWin();
-			computerAttack();
+			setTimeout(function() {computerAttack();}, 700);
 			} else if (incrementor >= 3 && cArr[8] === true && c9 < 1) {
 			let x = document.getElementById("ca9");
 			x.className = "hit";
 			c9++;
 			cArr[8] = false;
 			evaluateWin();
-			computerAttack();		
+			setTimeout(function() {computerAttack();}, 700);		
 			}}
 
 		// else {
@@ -480,6 +482,7 @@ if (cArr[0] === false && cArr[1] === false && cArr[2] === false && cArr[3] === f
 } }
 
 function playGame() {
+	alert("Attack the computer!");
 // console.log("Hi");
 }
 

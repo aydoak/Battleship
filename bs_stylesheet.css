@@ -12,6 +12,8 @@
   }
   .grid-container {
     border-style: solid;
+    border-color: darkblue;
+    border-radius: 5px;
     justify-content: center;
     width: 20em;
     height: 20em;
@@ -27,7 +29,7 @@
   }
   .grid-container > div {
     /*background-color: rgba(255, 255, 255, 0.8);*/
-    border: 1px solid black;
+    border: 1px solid darkblue;
     border-radius: 5px;
     padding-top: 0em;
     text-align: center;
