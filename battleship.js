@@ -5,7 +5,7 @@ let incrementor = 0;
 let compIncrementor = 0;
 
 
-//declare board space values
+//DECLARE BOARD SPACE VALUES
 
 let cArr = [false, false, false, false, false, false, false, false, false];
 let pArr = [{value: false, 
@@ -28,14 +28,14 @@ let pArr = [{value: false,
 					attacked: false}];
 
 
-//start game
+//START GAME
 setTimeout(function() {alert("Click on your boxes to set up your board");}, 200);	
 
 function startGame() {
 	location.reload();
 }
    
-//set computer ship positions
+//SET COMPUTER SHIP POSITIONS
 
 		function cShipPos() {
 		var arr =[];
@@ -51,7 +51,7 @@ function startGame() {
 		cShipPos();
 		console.log(cArr);
 
-//set player ship positions
+//SET PLAYER SHIP POSTIONS
 
 			function set_pa1() {
 				if (pArr[0].value === false && incrementor < 3) {
@@ -156,7 +156,7 @@ function startGame() {
 			let c9 = 0;
 
 
-			//player attacks
+			//PLAYER ATTACKS
 
 			function attack1() {
 				if (incrementor >= 3 && cArr[0] === false && c1 < 1) {
@@ -303,7 +303,7 @@ function startGame() {
 			}}
 
 
-		//computer attacks
+		//COMPUTER ATTACKS
 
 		function computerAttack() {
 			var randomNumber = Math.floor(Math.random()*9);
@@ -414,7 +414,7 @@ function startGame() {
 	}
 
 
-//declare winner
+//DECLARE WINNER
 
 function evaluateWin() {
 if (cArr[0] === false && cArr[1] === false && cArr[2] === false && cArr[3] === false && cArr[4] === false && cArr[5] === false && cArr[6] === false && cArr[7] === false && cArr[8] === false) {
@@ -427,5 +427,4 @@ if (cArr[0] === false && cArr[1] === false && cArr[2] === false && cArr[3] === f
 
 function playGame() {
 	alert("Attack the computer!");
-// console.log("Hi");
 }
