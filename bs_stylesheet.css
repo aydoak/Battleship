@@ -32,9 +32,9 @@
     border: 1px solid darkblue;
     border-radius: 5px;
     padding-top: 0em;
-    text-align: center;
-    font-size: 30px;
-  }
+    /*text-align: center;*/
+/*    font-size: 30px;
+*/  }
 
   .new {
    /* color: black;
@@ -68,9 +68,33 @@
     }
 
     #start {
+      color: darkblue;
+      background-color: lightgrey;
       font-size: 2em;
       font-weight: bold;
-      height: 3em;
-      width: 9em;
+      height: 2.5em;
+      width: 8em;
+      border-radius: 5px;
+      margin-top: 1em;
+    }
+    h1 {
+      color: darkblue;
+      background-color: lightgray;
+      border-style: solid;
+      border-color: darkblue;
+      border-width: 1px;
+      border-radius: 5px;
+      text-decoration-style: solid;
+      text-decoration-color: gray;
+      text-transform: uppercase;
+    }
+    h3 {
+      color: darkblue;
+      width: 11em;
+      height: 2em;
+      padding-top: 0.3em;
+      border-style: solid;
+      border-width: 1px;
+      background-color: lightgrey;
       border-radius: 5px;
     }
